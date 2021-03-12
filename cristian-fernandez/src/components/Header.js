@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'; 
 import { MdKeyboardArrowDown } from 'react-icons/md'; 
 import { Link } from 'react-scroll'; 
 
+import Aos from 'aos'; 
+import "aos/dist/aos.css"; 
+
+import Logo from "../pictures/logo.png"
 
 const StyledHeader = styled.div`
 
@@ -27,7 +31,9 @@ nav {
     justify-content: space-between;
     align-items: center; 
     color: white;
-    height: 7vh; 
+    height: 7vh;
+    z-index: 1; 
+    transition: 500ms; 
 }
 
 .links {
@@ -71,10 +77,10 @@ nav {
     justify-content: space-evenly; 
     align-items: center; 
     flex-direction: column;
-    text-align: center; 
-    width: 72%; 
+    width: 64%; 
     height: 100%; 
     color: white; 
+    text-align: center; 
 }
 
 h1 {
@@ -101,7 +107,7 @@ h3 {
 .buttons {
     display: flex;
     flex-direction: column; 
-    width: 45%; 
+    width: 40%; 
     margin-bottom: 2%;
     font-size: 1.8rem; 
 }
@@ -110,7 +116,7 @@ h3 {
     text-align: center; 
     width: 30%; 
     padding:3%; 
-    border: 2px solid white; 
+    border: 4px solid white; 
     margin: 1%; 
     color: white;
 }
@@ -122,10 +128,11 @@ h3 {
 
 }
 
-.icon {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1.2%
 }
 
 .arrow {
@@ -134,28 +141,67 @@ h3 {
     font-size: 10rem; 
 }
 
+.arrow:hover {
+    cursor: pointer;
+}
 
 
+.logo {
+    width: 32%;
+}
+
+
+
+.active {
+    background: black; 
+    color: white; 
+    width: 100%; 
+    position: fixed; 
+    top: 0px; 
+    transition: 450ms; 
+    transition-duration: 1s; 
+}
 
 `
 
 const Header = () => {
+
+    const [navBar, setNavBar] = useState(false); 
+
+
+    const changeNavBar = () => {
+
+        if(window.scrollY >= 920){
+            setNavBar(true); 
+        }
+        else {
+            setNavBar(false); 
+        }
+    }
+
+
+    window.addEventListener("scroll", changeNavBar); 
+
+    useEffect(() => {
+        Aos.init({duration: 4000})
+    }, [])
+
     return (
         <StyledHeader>
-            <nav>
+            <nav className={`${navBar ? "active" : ""}`}>
                 <div className="icon">
-                    Hey
+                    <img src={Logo} className="logo" />
                 </div>
 
                 <div className="links">
                     <Link className="link">
                         Home
                     </Link>
-                    <Link className="link">
+                    <Link to="About" smooth={true} className="link">
                         About
                     </Link>
                     <Link className="link">
-                        Projets
+                        Projects
                     </Link>
                     <Link className="link">
                         Contact
@@ -166,7 +212,7 @@ const Header = () => {
             <div className="center-div">
                 <div className="details">
                     <div className="name">
-                        <h3>Welcome,</h3>
+                        <h3>WELCOME,</h3>
                         
                         <div className="occupation">
                             <h1>I am Cristian Fernandez.</h1>
@@ -190,8 +236,10 @@ const Header = () => {
                 </div>
             </div>
 
-            <div className="icon">
-                <MdKeyboardArrowDown className="arrow"/>
+            <div data-aos="flip-up" data-aos-duration="3000" className="footer">
+                <Link to="About" smooth={true}>
+                    <MdKeyboardArrowDown className="arrow" />
+                </Link>
             </div>
         </StyledHeader>
     )
