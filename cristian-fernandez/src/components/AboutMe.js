@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
 import styled from 'styled-components'; 
 
-import Aos from "aos";
 import "aos/dist/aos.css";
+import { motion } from 'framer-motion';
 
 const StyledAboutMe = styled.div`
 
@@ -137,6 +137,7 @@ const AboutMe = () => {
     })
 
     return (
+        <motion.div exit={{ opacity: 0}} animate={{opacity: 1}} initial={{ opacity: 0}} transition={{ duration: 2}}>
         <StyledAboutMe id="About">
             <div className="title">
                 <h1>About Me</h1>
@@ -165,6 +166,7 @@ const AboutMe = () => {
                 </div>
             </div>
         </StyledAboutMe>
+        </motion.div>
     )
 }
 

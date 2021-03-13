@@ -6,6 +6,8 @@ import { Link } from 'react-scroll';
 import Aos from 'aos'; 
 import "aos/dist/aos.css"; 
 
+import { AnimatePresence, motion } from 'framer-motion'; 
+
 import Logo from "../pictures/logo.png"
 
 const StyledHeader = styled.div`
@@ -162,6 +164,10 @@ h3 {
     transition-duration: 1s; 
 }
 
+.test {
+    background: black; 
+}
+
 `
 
 const Header = () => {
@@ -187,6 +193,7 @@ const Header = () => {
     }, [])
 
     return (
+        <motion.div className="test" exit={{ opacity: 1}} animate={{opacity: 1}} initial={{ opacity: 0}}>
         <StyledHeader>
             <nav className={`${navBar ? "active" : ""}`}>
                 <div className="icon">
@@ -242,6 +249,7 @@ const Header = () => {
                 </Link>
             </div>
         </StyledHeader>
+        </motion.div>
     )
 }
 

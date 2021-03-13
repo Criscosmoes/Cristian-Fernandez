@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 
 import "../App.css"; 
@@ -8,12 +9,32 @@ import "../App.css";
 
 import Header from "./Header"; 
 import AboutMe from "./AboutMe";
+import Projects from './Projects';
+import ContactForm from './ContactForm';
+
+
+
+
+
+import { AnimatePresence } from 'framer-motion';
+
+
 
 const App = () => {
     return (
         <div>
-            <Header />
-            <AboutMe />
+            <AnimatePresence>
+                <Switch>
+
+                    <Route path="/">
+                        <Header />
+                        <AboutMe />
+                        <Projects />
+                        <ContactForm />
+                    </Route>
+
+                </Switch>
+            </AnimatePresence>
         </div>
     )
 }
