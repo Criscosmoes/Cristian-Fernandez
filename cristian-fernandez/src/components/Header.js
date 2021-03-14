@@ -19,10 +19,10 @@ const StyledHeader = styled.div`
 
 & { 
     height: 100vh;
-    background-image: url(${"https://images.unsplash.com/photo-1555122125-5b2774fec2f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"}); 
+    background-image: url(${"https://images.unsplash.com/photo-1595529281422-7c5b818aa53f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"}); 
     background-repeat: no-repeat; 
     background-size: cover; 
-    background-position: 0% 80%; 
+    background-position: 0% 0%; 
     display: flex; 
     flex-direction: column;
     font-family: 'Secular One', sans-serif;
@@ -79,10 +79,10 @@ nav {
     justify-content: space-evenly; 
     align-items: center; 
     flex-direction: column;
-    width: 64%; 
+    width: 70%; 
     height: 100%; 
     color: white; 
-    text-align: center; 
+    margin-left: 8%
 }
 
 h1 {
@@ -95,6 +95,8 @@ h2 {
 
 h3 {
     font-size: 5rem; 
+    width: 100%; 
+    color: #DAAF66; 
 }
 
 .occupation {
@@ -116,7 +118,7 @@ h3 {
 
 .button {
     text-align: center; 
-    width: 30%; 
+    width: 40%; 
     padding:3%; 
     border: 4px solid white; 
     margin: 1%; 
@@ -168,49 +170,79 @@ h3 {
     background: black; 
 }
 
+.orange {
+    color: #DAAF66; 
+}
+
 `
 
 const Header = () => {
 
     const [navBar, setNavBar] = useState(false); 
+    const [navHome, setNavHome] = useState(true); 
+    const [navAbout, setNavAbout] = useState(false); 
+    const [navProjects, setNavProjects] = useState(false); 
+    const [navContact, setNavContact] = useState(false); 
+
 
 
     const changeNavBar = () => {
 
         if(window.scrollY >= 920){
             setNavBar(true); 
+            setNavHome(false);
+            setNavAbout(true); 
+        }
+        else if(window.scrollY >= 1600){
+            setNavProjects(true); 
+            setNavHome(false); 
+            setNavAbout(false); 
+            setNavContact(false); 
+        }
+        else if(window.scrollY >= 2314){
+            setNavContact(true); 
+            setNavHome(false); 
+            setNavAbout(false); 
+            setNavProjects(false); 
         }
         else {
             setNavBar(false); 
+            setNavHome(true); 
+            setNavAbout(false); 
+            setNavProjects(false); 
+            setNavContact(false); 
         }
+    
+
+        console.log(window.scrollY); 
     }
 
 
-    window.addEventListener("scroll", changeNavBar); 
 
     useEffect(() => {
         Aos.init({duration: 4000})
+        document.addEventListener("scroll", changeNavBar);
     }, [])
 
     return (
         <motion.div className="test" exit={{ opacity: 1}} animate={{opacity: 1}} initial={{ opacity: 0}}>
-        <StyledHeader>
+        <StyledHeader id="Home">
             <nav className={`${navBar ? "active" : ""}`}>
                 <div className="icon">
                     <img src={Logo} className="logo" />
                 </div>
 
                 <div className="links">
-                    <Link className="link">
+                    <Link className={`link ${navHome ? "orange" : ""}`} to="Home" smooth={true}>
                         Home
                     </Link>
-                    <Link to="About" smooth={true} className="link">
+                    <Link to="About" smooth={true} className={`link ${navAbout ? "orange" : ""}`}>
                         About
                     </Link>
-                    <Link className="link">
+                    <Link className={`link ${navProjects ? "orange" : ""}`} to="Projects" smooth={true} offset={-40}>
                         Projects
                     </Link>
-                    <Link className="link">
+                    <Link className={`link ${navContact ? "orange" : ""}`} to="Contact" smooth={true}>
                         Contact
                     </Link>
                 </div>
@@ -233,10 +265,10 @@ const Header = () => {
                 
                     </div>
                     <div className="buttons">
-                        <Link className="button">
+                        <Link className="button" to="Projects" smooth={true} offset={-30}>
                             Projects
                         </Link>
-                        <Link className="button">
+                        <Link className="button" to="About" smooth={true}>
                             Who Am I?
                         </Link>
                     </div>

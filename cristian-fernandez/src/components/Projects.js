@@ -90,7 +90,7 @@ const Projects = () => {
 
 
     return (
-        <StyledProjects>
+        <StyledProjects id="Projects">
             <div className="title">
                 <h1>Latest Projects</h1>
                 <h3>These are some of the projcts that I have created recently</h3>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'; 
+import "aos/dist/aos.css";
 
 
 
@@ -54,7 +55,7 @@ form {
     justify-content: center; 
     align-items: center; 
     flex-direction: column; 
-    width: 70%
+    width: 50%
 }
 
 form > * {
@@ -75,23 +76,57 @@ form > * {
 
 .contact {
     display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    justify-content: space-evenly; 
+    align-items: center;  
     width: 60%; 
 }
 
 .information {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
-    width: 30%; 
+    height: 550px; 
+    width: 30%
 }
 
 .information > * {
-    margin: 1%
+    margin: 7%; 
 }
 
+h4 {
+    font-size: 2.5rem; 
+}
+
+.details {
+    font-size: 2rem; 
+}
+
+label {
+    font-size: 3rem; 
+}
+
+input {
+    border: none; 
+    border-bottom: 2px solid gray; 
+    outline: none; 
+    font-size: 2rem; 
+}
+
+.text-area {
+    border: none; 
+    outline: none; 
+    border-bottom: 1px solid gray; 
+    background: transparent;
+    resize: none;  
+    font-size: 2rem;
+}
+
+
+.normal {
+    height: 60px; 
+}
+
+button {
+    padding: 2%;
+    width: 50%
+}
 `
 
 
@@ -101,7 +136,7 @@ const ContactForm = () => {
     const sendEmail = e => {
         e.preventDefault();
 
-        emailjs.sendForm('gmail', 'template_3nynart', e.target, 'user_Xhy2HCeGOm75iioB77ysW')
+        emailjs.sendForm('service_4652yqq', 'template_3nynart', e.target, 'user_Xhy2HCeGOm75iioB77ysW')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -117,7 +152,7 @@ const ContactForm = () => {
 
 
     return (
-        <StyledContactForm>
+        <StyledContactForm id="Contact">
             <div className="container">
                 <div className="lets-talk">
                     <h2>Let's Talk.</h2>
@@ -128,38 +163,39 @@ const ContactForm = () => {
                     <form onSubmit={sendEmail}>
 
                         <div className="input">
-                            <label>Name</label>
-                            <input type="text" name="name" />
+                            
+                            <input className="normal" type="text" name="name" placeholder="name" />
                         </div>
 
                         <div className="input">
-                            <label>Email</label>
-                            <input type="text" name="email" />
+                            
+                            <input className="normal" type="text" name="email" placeholder="email" />
                         </div>
 
                         <div className="input">
-                            <label>Subject</label>
-                            <input type="text" name="subject" />
+                            
+                            <input className="normal" type="text" name="subject" placeholder="subject" />
                         </div>
 
                         <div className="input">
-                            <label>Message</label>
-                            <input type="text" name="message" />
+                            
+                           <textarea className="text-area" name="message" placeholder="message" rows="10" cols="40"></textarea>
                         </div>
 
-                        <button type="submit">Sumbit</button>
+                        <button type="submit">Submit</button>
                     </form>
 
                     <div className="information">
-                        <div>
+                        <div className="info">
                             <h4>Email</h4>
-                            <p>cristian.fernandez9797@gmail.com</p>
+                            <p className="details">email@yahoo.com</p>
                         </div>
 
-                        <div>
-                            <h4>Address</h4>
-                            <p>Ontario, California<br></br>USA</p>
+                        <div className="info">
+                            <h4>Location</h4>
+                            <p className="details">Ontario, California<br></br>USA</p>
                         </div>
+
                     </div>
                 </div>
             </div>
