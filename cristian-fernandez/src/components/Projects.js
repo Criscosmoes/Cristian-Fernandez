@@ -167,35 +167,35 @@ const Projects = () => {
 
     const projects = [{image: "https://images.unsplash.com/photo-1557200134-3103da7b6bff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", title: "Movies Info", description: "Movies Info is a web app that helps you gain instant information on any movie you want. Watch trailers, see cast, and even where you can watch a specific movie. All within seconds. ", url: "https://youtube.com", madeUsing: ["React.js", "React Router", "Redux.js", "Styled Components"]}, {image: "https://images.unsplash.com/photo-1557200134-3103da7b6bff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", title: "Prog Typing", description: "Prog Typing is a place where programmers can use to improve their typing speed. Including popular languages like Python, Javascript, etc, go from a complete beginner to an expert typist.", url: "https://youtube.com", madeUsing: ["React.js", "React Router", "Redux.js", "Node.js", "Express.js", "MongoDB"]}]
 
-    const allProjects = projects.map(cur => {
+    const allProjects = projects.map((cur, index) => {
         return (
-            <div className="project">
-                <img src={cur.image} /> 
+            <div className="project" key={index} >
+                <img src={cur.image} alt="idk" /> 
                 <div className="details">
                     <h2>{cur.title}</h2>
                     <p>{cur.description}</p>
                     <div className="using">
-                        {cur.madeUsing.map(cur => {
+                        {cur.madeUsing.map((cur, index) => {
                             return (
-                                <div className="technology">
+                                <div key={index} className="technology">
                                     {cur}
                                 </div>
                             )
                         })}
                     </div>
-                    <button>See Live</button>
+                    <button>Visit Site</button>
                 </div>
             </div>
         )
     })
 
 
-    const onButtonClick = url => {
+/*     const onButtonClick = url => {
 
         // go to the webpage of the project
 
 
-    }
+    } */
 
 
 

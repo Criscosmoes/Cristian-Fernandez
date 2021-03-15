@@ -305,7 +305,7 @@ const ContactForm = () => {
 
         checkInput(); 
 
-    },[userInput.message, userInput.name, userInput.email, userInput.subject])
+    },[userInput.message, userInput.name, userInput.email, userInput.subject, checkInput])
 
 
 

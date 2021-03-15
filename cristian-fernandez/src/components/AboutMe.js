@@ -1,9 +1,6 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'; 
 
-
-import { GrTechnology } from 'react-icons/gr';
-import { GrLanguage } from 'react-icons/gr';
 
 import "aos/dist/aos.css";
 import { motion } from 'framer-motion';
@@ -155,15 +152,15 @@ const AboutMe = () => {
 
     const technologies = ["React", "Redux", "Express", "Next", "mySQL", "MongoDB", "Mongoose", "Version Control", "Github"]
 
-    const allLanguages = languages.map(cur => {
+    const allLanguages = languages.map((cur, index) => {
         return (
-            <div className="technology">{cur}</div>
+            <div key={index} className="technology">{cur}</div>
         )
     })
 
-    const allTechnologies = technologies.map(cur => {
+    const allTechnologies = technologies.map((cur, index)=> {
         return (
-            <div className="technology">{cur}</div>
+            <div key={index} className="technology">{cur}</div>
         )
     })
 

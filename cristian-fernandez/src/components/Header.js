@@ -10,8 +10,6 @@ import "aos/dist/aos.css";
 
 import { motion } from 'framer-motion'; 
 
-import Logo from "../pictures/logo.png"
-
 const StyledHeader = styled.div`
 
 
@@ -246,7 +244,7 @@ const Header = () => {
 
     const changeNavBar = () => {
 
-        if(window.scrollY >= 920){
+        if(window.scrollY >= 800){
             setNavBar(true); 
         }
 
@@ -315,10 +313,10 @@ const Header = () => {
                     <Link className={`link ${navHome ? "orange" : ""}`} to="Home" smooth={true}>
                         Home
                     </Link>
-                    <Link to="About" smooth={true} offset={-20} className={`link ${navAbout ? "orange" : ""}`}>
+                    <Link to="About" smooth={true} offset={-60} className={`link ${navAbout ? "orange" : ""}`}>
                         About
                     </Link>
-                    <Link className={`link ${navProjects ? "orange" : ""}`} to="Projects" smooth={true} offset={-40}>
+                    <Link className={`link ${navProjects ? "orange" : ""}`} to="Projects" smooth={true} offset={-50}>
                         Projects
                     </Link>
                     <Link className={`link ${navContact ? "orange" : ""}`} to="Contact" smooth={true} offset={-30}>
