@@ -350,7 +350,7 @@ const ContactForm = () => {
                     <div className="information">
                         <div className="info">
                             <h5>EMAIL</h5>
-                            <p className="details">email@yahoo.com</p>
+                            <p className="details">crisfernandez.dev@gmail.com</p>
                         </div>
 
                         <div className="info">

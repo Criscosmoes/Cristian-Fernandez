@@ -11,6 +11,7 @@ import Header from "./Header";
 import AboutMe from "./AboutMe";
 import Projects from './Projects';
 import ContactForm from './ContactForm';
+import Footer from "./Footer"; 
 
 
 
@@ -31,6 +32,7 @@ const App = () => {
                         <AboutMe />
                         <Projects />
                         <ContactForm />
+                        <Footer />
                     </Route>
 
                 </Switch>
