@@ -37,18 +37,51 @@ const StyledContactForm = styled.div`
 // lets talk section 
 
 .lets-talk > * {
-    margin: 1%;
+    margin: .5%;
 }
 
 
 .lets-talk {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
     text-align: center; 
-    width: 40%; 
+    width: 100%
 
+}
+
+h1 {
+    font-size: 6rem;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: bolder; 
 }
 
 h2 {
     font-size: 7rem; 
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder; 
+}
+
+h4 {
+    letter-spacing: 0.1rem;
+    font-size: 3rem; 
+    color: #DAAF66; 
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+h5 {
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.16rem;
 }
 
 p {
@@ -102,12 +135,12 @@ form > * {
     margin: 7%; 
 }
 
-h4 {
-    font-size: 2.5rem; 
-}
 
 .details {
-    font-size: 2rem; 
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 label {
@@ -115,10 +148,13 @@ label {
 }
 
 input {
+
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder;
     border: none; 
     border-bottom: .1px solid rgba(255, 255, 255, 0.2);; 
     outline: none; 
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     background: transparent; 
     color: white;
     transition: ease-out .2s; 
@@ -126,6 +162,7 @@ input {
 
 input::placeholder {
     color: rgba(255, 255, 255, 0.5); 
+    
 }
 
 input:focus {
@@ -134,12 +171,14 @@ input:focus {
 }
 
 .text-area {
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder;
     border: none; 
     outline: none; 
     border-bottom: solid .1px rgba(255, 255, 255, 0.2); 
     background: transparent;
     resize: none;  
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white; 
     transition: ease-out .2s; 
 }
@@ -167,7 +206,11 @@ button {
     outline: none; 
     color: white; 
     cursor: pointer;
-    transition: ease-out .4s; 
+    transition: ease-out .4s;
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder; 
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
 
 
@@ -176,6 +219,17 @@ button {
     border: 2px solid #DAAF66;
     transition: ease-in .5s; 
 }
+
+
+hr {
+    width: 10%;
+    border: .1px solid #DAAF66;  
+}
+
+.info {
+    margin: 2%
+}
+
 `
 
 
@@ -259,8 +313,10 @@ const ContactForm = () => {
         <StyledContactForm id="Contact">
             <div className="container">
                 <div className="lets-talk">
-                    <h2>Let's Talk.</h2>
-                    <p>Whether it's work related or just a chat, send me an email.</p>
+                    <h4>CONTACT</h4>
+                    <h1>Let's Talk.</h1>
+                    <h3 className="info">Whether it's work related or just a chat, send me an email.</h3>
+                    <hr></hr>
                 </div>
 
                 <div className="contact">
@@ -291,12 +347,12 @@ const ContactForm = () => {
 
                     <div className="information">
                         <div className="info">
-                            <h4>EMAIL</h4>
+                            <h5>EMAIL</h5>
                             <p className="details">email@yahoo.com</p>
                         </div>
 
                         <div className="info">
-                            <h4>LOCATION</h4>
+                            <h5>LOCATION</h5>
                             <p className="details">Ontario, California<br></br>USA</p>
                         </div>
 
