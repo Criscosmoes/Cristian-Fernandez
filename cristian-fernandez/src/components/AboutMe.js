@@ -1,14 +1,18 @@
 import React, {useEffect} from 'react'
 import styled from 'styled-components'; 
 
+
+import { GrTechnology } from 'react-icons/gr';
+import { GrLanguage } from 'react-icons/gr';
+
 import "aos/dist/aos.css";
 import { motion } from 'framer-motion';
 
 const StyledAboutMe = styled.div`
 
-@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -20,72 +24,111 @@ const StyledAboutMe = styled.div`
     flex-direction: column; 
 }
 
+& > * {
+    margin: 1%
+}
+
+
+// first container 
 .title {
     display: flex; 
     justify-content: center;
     align-items: center; 
     flex-direction: column; 
-    width: 100%; 
-    height: 400px; 
+    width: 100%;
+    height: 25rem; 
 }
 
 .title > * {
-    margin: 1%
+    margin: .5%
 }
 
+
+
 h1 {
-    font-size: 7rem; 
-    font-family: 'Secular One', sans-serif;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: bolder; 
+    font-size: 6rem; 
+}
+
+
+h2, h4, h3 {
+
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder;
+
 }
 
 h2 {
-    font-size: 4rem; 
-    font-family: 'Zilla Slab', sans-serif;
-
+    letter-spacing: 0.1rem;
+    font-size: 3rem;;
 }
 
 h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    letter-spacing: 0.1rem;
     font-size: 3rem; 
-    font-family: 'Zilla Slab', sans-serif;
+    color: #DAAF66; 
+}
+
+p {
+    font-size: 1.9rem; 
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: normal; 
+    line-height: 1.875;
+    color: #5f5f5f;
 }
 
 .info {
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center; 
-    width: 100%; 
-    height: 350px; 
-}
-
-.info > * {
     margin: 2%
 }
 
-.about-me {
-    display: flex; 
-    justify-content: space-evenly; 
-    align-items: center; 
-    flex-direction: column; 
-    width: 33%;
-    height: 100%; 
-}
-
-
-
-
-p {
-    width: 80%;
-    font-size: 1.8rem; 
-    color: #606060; 
-    letter-spacing: .1rem; 
-    line-height: 2.5rem; 
-    height: 50%; 
-    font-family: 'Zilla Slab', sans-serif;
-}
-
 hr {
-    width: 10%; 
-    border: .5px solid lightgray; 
+    width: 10%;
+    border: .1px solid #DAAF66;  
+}
+
+
+
+
+
+// second container
+
+.skills-container {
+    display:flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 40vh; 
+    width: 100%
+}
+
+.skills-container > * {
+    width: 30%; 
+    height: 100%; 
+    margin: 1%
+}
+
+
+.technology {
+    background: #eee;
+    color: #333;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-family: 'montserrat-medium', sans-serif; 
+    margin: 1%; 
+    font-weight: bolder; 
+    border: 1px solid black; 
+
+}
+
+.about-me > * {
+    margin: 3%
 }
 
 .all-languages {
@@ -93,23 +136,11 @@ hr {
     justify-content: space-evenly; 
     align-items: center; 
     flex-wrap: wrap; 
-    width: 100%; 
-    font-family: 'Secular One', sans-serif;
-    height: 50%; 
 }
 
-.language {
-    margin: 1%; 
-    width: 20%; 
-    text-align: center; 
-    padding: 2%; 
-    background: #F0F0F0; 
-    color: #333333; 
-    border: 2px solid black;
-    font-size: 1.7rem; 
+.languages > * {
+    margin: 3%
 }
-
-
 
 `
 
@@ -120,51 +151,51 @@ const AboutMe = () => {
 
 
 
-    const languages = ["HTML", "CSS", "Javascript", "NodeJS", "Python", "C++"]
+    const languages = ["HTML", "CSS", "Javascript", "Node", "Python", "C++"]
 
-    const technologies = ["React.js", "Redux", "Express.js", "Next.js", "SQL", "MongoDB", "Mongoose", "Version Control", "Github"]
+    const technologies = ["React", "Redux", "Express", "Next", "mySQL", "MongoDB", "Mongoose", "Version Control", "Github"]
 
     const allLanguages = languages.map(cur => {
         return (
-            <div className="language">{cur}</div>
+            <div className="technology">{cur}</div>
         )
     })
 
     const allTechnologies = technologies.map(cur => {
         return (
-            <div className="language">{cur}</div>
+            <div className="technology">{cur}</div>
         )
     })
+
 
     return (
         <motion.div exit={{ opacity: 0}} animate={{opacity: 1}} initial={{ opacity: 0}} transition={{ duration: 2}}>
         <StyledAboutMe id="About">
             <div className="title">
+                <h4>ABOUT</h4>
                 <h1>About Me</h1>
-                <h3>Get to know me</h3>
+                <h3 className="info">Get to know who I am</h3>
                 <hr></hr>
             </div>
-
-            <div className="info">
-                <div className="about-me" data-aos="fade-down" data-aos-duration="1000" data-aos-placement="top-bottom" >
-                   <h2>Hello!</h2>
-                   <p>My name is Cristian Fernandez and I am a passionate Web Developer. I love to build efficient and scaleable products using the latest technologies. I would love to be part of a team that wants to have an impact on the current tech savvy world. </p>
+            <div className="skills-container">
+                <div className="about-me">
+                    <h2>Hello!</h2>
+                    <p>My name is Cristian Fernandez and I am a passionate Web Developer. I love to build efficient and scaleable products using the latest technologies. I would love to be part of a team that wants to have an impact on the current tech savvy world. <br></br> <br></br>Whether it's a project, chat, or job opportuniy, I would love to hear from you. Don't hesitate to reach out.</p>
                 </div>
-
-                <div className="about-me" data-aos="fade-down" data-aos-duration="2000" data-aos-placement="top-bottom">
+                <div className="languages">
                     <h2>Languages</h2>
                     <div className="all-languages">
                         {allLanguages}
                     </div>
                 </div>
-
-                <div className="about-me" data-aos="fade-down" data-aos-duration="3000" data-aos-placement="top-bottom">
+                <div className="languages">
                     <h2>Technologies</h2>
                     <div className="all-languages">
                         {allTechnologies}
                     </div>
                 </div>
             </div>
+        
         </StyledAboutMe>
         </motion.div>
     )

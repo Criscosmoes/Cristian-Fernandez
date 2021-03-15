@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'; 
 import { MdKeyboardArrowDown } from 'react-icons/md'; 
+import { GrLinkedin } from 'react-icons/gr'; 
+import { ImGithub } from 'react-icons/im'; 
 import { Link } from 'react-scroll'; 
-
+import TypeWriterEffect from "react-typewriter-effect";
 import Aos from 'aos'; 
 import "aos/dist/aos.css"; 
 
@@ -15,6 +17,9 @@ const StyledHeader = styled.div`
 
 
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
 
 
 & { 
@@ -25,17 +30,20 @@ const StyledHeader = styled.div`
     background-position: 0% 0%; 
     display: flex; 
     flex-direction: column;
-    font-family: 'Secular One', sans-serif;
 }
 
-nav {
+.nav {
     display: flex; 
     justify-content: space-between;
     align-items: center; 
     color: white;
     height: 7vh;
-    z-index: 1; 
-    transition: 500ms; 
+    z-index: 1;
+    font-family: 'montserrat', sans-serif;
+    text-transform: uppercase; 
+    font-size: 14px; 
+    letter-spacing: 0.25rem;
+    font-weight: bolder;
 }
 
 .links {
@@ -43,13 +51,18 @@ nav {
     justify-content: space-evenly; 
     align-items: center; 
     width: 30%;
-    font-size: 2rem; 
 }
 
 
 .link {
     cursor: pointer;
     color: white; 
+    transition: ease-out .2s;
+}
+
+.link:hover {
+    color: #DAAF66;
+    transition: all .2s linear; 
 }
 
 .icon {
@@ -86,7 +99,9 @@ nav {
 }
 
 h1 {
-    font-size: 8rem; 
+    font-size: 8rem;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: bolder; 
 }
 
 h2 {
@@ -96,7 +111,10 @@ h2 {
 h3 {
     font-size: 5rem; 
     width: 100%; 
-    color: #DAAF66; 
+    color: #DAAF66;
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder; 
+    letter-spacing: 0.1rem; 
 }
 
 .occupation {
@@ -112,8 +130,12 @@ h3 {
     display: flex;
     flex-direction: column; 
     width: 40%; 
-    margin-bottom: 2%;
     font-size: 1.8rem; 
+    font-family: 'montserrat', sans-serif;
+    font-weight: bolder; 
+    letter-spacing: 0.1rem;
+
+
 }
 
 .button {
@@ -122,14 +144,18 @@ h3 {
     padding:3%; 
     border: 4px solid white; 
     margin: 1%; 
-    color: white;
+    color: white; 
+    font-size: 15px; 
+    transition: ease-out 0.4s; 
+    text-transform: uppercase; 
 }
 
-.button:hover {
+
+.button:hover{
     cursor: pointer;
     background: white; 
     color: black; 
-
+    transition: all .4s ease-in-out; 
 }
 
 .footer {
@@ -142,11 +168,15 @@ h3 {
 .arrow {
     border: none;
     color: white; 
-    font-size: 10rem; 
+    font-size: 10rem;
+    transition: ease-out 0.5s; 
 }
 
 .arrow:hover {
     cursor: pointer;
+    color: #DAAF66;
+    transition: all .4s ease-in-out; 
+
 }
 
 
@@ -174,12 +204,40 @@ h3 {
     color: #DAAF66; 
 }
 
+.typing-text {
+    height: 1vh; 
+}
+
+.icons {
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center;
+    color: white; 
+    width: 42%; 
+    font-size: 5rem; 
+    margin-top: 3%; 
+}
+
+.react-icons {
+    outline: none; 
+    border: none; 
+    cursor: pointer;
+    transition: ease-out .2s; 
+}
+
+.react-icons:hover {
+    color: rgba(255, 255, 255, 0.6); 
+    transition: ease-in .2s; 
+}
+
+
+
 `
 
 const Header = () => {
 
     const [navBar, setNavBar] = useState(false); 
-    const [navHome, setNavHome] = useState(true); 
+    const [navHome, setNavHome] = useState(false); 
     const [navAbout, setNavAbout] = useState(false); 
     const [navProjects, setNavProjects] = useState(false); 
     const [navContact, setNavContact] = useState(false); 
@@ -190,31 +248,52 @@ const Header = () => {
 
         if(window.scrollY >= 920){
             setNavBar(true); 
-            setNavHome(false);
-            setNavAbout(true); 
         }
-        else if(window.scrollY >= 1600){
+
+
+        const view = window.scrollY; 
+
+        if (view >= 0 && view <= 600){
+            // we should be in the home area; 
+
+            setNavHome(true); 
+            setNavAbout(false); 
+            setNavProjects(false); 
+            setNavContact(false);  
+        }
+
+
+
+        if (view >= 600 && view <= 1500){
+            // we should be in the about section; 
+
+            setNavAbout(true); 
+            setNavHome(false); 
+            setNavProjects(false); 
+            setNavContact(false); 
+        }
+
+        if (view >= 1500 && view <= 2400){
+            // we should be in the project section; 
+
             setNavProjects(true); 
             setNavHome(false); 
             setNavAbout(false); 
             setNavContact(false); 
         }
-        else if(window.scrollY >= 2314){
+
+        if (view >= 2700){
+            // we should be in the contact section; 
+
             setNavContact(true); 
             setNavHome(false); 
             setNavAbout(false); 
-            setNavProjects(false); 
+            setNavProjects(false) 
         }
-        else {
-            setNavBar(false); 
-            setNavHome(true); 
-            setNavAbout(false); 
-            setNavProjects(false); 
-            setNavContact(false); 
-        }
+
     
 
-        console.log(window.scrollY); 
+
     }
 
 
@@ -227,9 +306,9 @@ const Header = () => {
     return (
         <motion.div className="test" exit={{ opacity: 1}} animate={{opacity: 1}} initial={{ opacity: 0}}>
         <StyledHeader id="Home">
-            <nav className={`${navBar ? "active" : ""}`}>
+            <nav className={`nav ${navBar ? "active" : ""}`}>
                 <div className="icon">
-                    <img src={Logo} className="logo" />
+                    
                 </div>
 
                 <div className="links">
@@ -255,7 +334,15 @@ const Header = () => {
                         
                         <div className="occupation">
                             <h1>I am Cristian Fernandez.</h1>
-                            <h2>Fullstack Developer</h2>
+                            <div className="typing-text"><TypeWriterEffect className="fullstack"
+                            textStyle={{ fontFamily: "Libre Baskerville", fontSize: "6rem", fontWeight: "bolder"}}
+                            startDelay={800}
+                            cursorColor="blue"
+                            multiText={[
+                                "Fullstack Developer",
+                            ]}
+                            typeSpeed={80}
+                            /></div>
                         </div>
 
                         <div></div>
@@ -264,13 +351,17 @@ const Header = () => {
 
                 
                     </div>
-                    <div className="buttons">
+                    <div className="buttons command">
                         <Link className="button" to="Projects" smooth={true} offset={-30}>
                             Projects
                         </Link>
                         <Link className="button" to="About" smooth={true}>
                             Who Am I?
                         </Link>
+                        <div className="icons">
+                            <ImGithub className="react-icons" />
+                            <GrLinkedin className="react-icons" />
+                        </div>
                     </div>
                 </div>
             </div>
