@@ -8,7 +8,7 @@ import TypeWriterEffect from "react-typewriter-effect";
 import Aos from 'aos'; 
 import "aos/dist/aos.css"; 
 
-import { AnimatePresence, motion } from 'framer-motion'; 
+import { motion } from 'framer-motion'; 
 
 import Logo from "../pictures/logo.png"
 
@@ -315,13 +315,13 @@ const Header = () => {
                     <Link className={`link ${navHome ? "orange" : ""}`} to="Home" smooth={true}>
                         Home
                     </Link>
-                    <Link to="About" smooth={true} className={`link ${navAbout ? "orange" : ""}`}>
+                    <Link to="About" smooth={true} offset={-20} className={`link ${navAbout ? "orange" : ""}`}>
                         About
                     </Link>
                     <Link className={`link ${navProjects ? "orange" : ""}`} to="Projects" smooth={true} offset={-40}>
                         Projects
                     </Link>
-                    <Link className={`link ${navContact ? "orange" : ""}`} to="Contact" smooth={true}>
+                    <Link className={`link ${navContact ? "orange" : ""}`} to="Contact" smooth={true} offset={-30}>
                         Contact
                     </Link>
                 </div>

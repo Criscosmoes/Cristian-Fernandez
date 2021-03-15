@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'; 
 import "aos/dist/aos.css";
+import { motion } from 'framer-motion'; 
 
 
 
@@ -310,6 +311,7 @@ const ContactForm = () => {
 
 
     return (
+        <motion.div exit={{ opacity: 0}} animate={{opacity: 1}} initial={{ opacity: 0}} transition={{ duration: 2}}>
         <StyledContactForm id="Contact">
             <div className="container">
                 <div className="lets-talk">
@@ -339,7 +341,7 @@ const ContactForm = () => {
 
                         <div className="input">
                             
-                           <textarea onChange={onInputChange} value={userInput.message} className="text-area" name="message" placeholder="Message" rows="10" cols="40"></textarea>
+                           <textarea onChange={onInputChange} value={userInput.message} className="text-area" name="message" placeholder="Message" rows="4" cols="20"></textarea>
                         </div>
 
                         <button className={`${disabled ? "" : "enabled"}`} type="submit" disabled={disabled}>{onSuccess ? "Sent!" : "Submit"}</button>
@@ -360,6 +362,7 @@ const ContactForm = () => {
                 </div>
             </div>
         </StyledContactForm>
+        </motion.div>
     )
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'; 
+import { motion } from 'framer-motion'; 
 
 const StyledProjects = styled.div`
 
@@ -199,17 +200,19 @@ const Projects = () => {
 
 
     return (
-        <StyledProjects id="Projects">
-            <div className="title">
-                <h4>PROJECTS</h4>
-                <h1>Latest Projects</h1>
-                <h3 className="info">These are some of the projects that I have created recently</h3>
-                <hr></hr>
-            </div>
-            <div className="projects">
-                {allProjects}
-            </div>
-        </StyledProjects>
+        <motion.div exit={{ opacity: 0}} animate={{opacity: 1}} initial={{ opacity: 0}} transition={{ duration: 2}}>
+            <StyledProjects id="Projects">
+                <div className="title">
+                    <h4>PROJECTS</h4>
+                    <h1>Latest Projects</h1>
+                    <h3 className="info">These are some of the projects that I have created recently</h3>
+                    <hr></hr>
+                </div>
+                <div className="projects">
+                    {allProjects}
+                </div>
+            </StyledProjects>
+        </motion.div>
     )
 }
 
