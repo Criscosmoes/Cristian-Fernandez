@@ -73,7 +73,7 @@ const StyledHeader = styled.div`
     display: flex; 
     justify-content: center; 
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .details {
@@ -93,7 +93,8 @@ const StyledHeader = styled.div`
     width: 70%; 
     height: 100%; 
     color: white; 
-    margin-left: 8%
+    margin-left: 8%; 
+    margin-bottom: 6%
 }
 
 h1 {
@@ -103,7 +104,9 @@ h1 {
 }
 
 h2 {
-    font-size: 6rem;
+    font-size: 7rem;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: bolder;
 }
 
 h3 {
@@ -132,6 +135,7 @@ h3 {
     font-family: 'montserrat', sans-serif;
     font-weight: bolder; 
     letter-spacing: 0.1rem;
+    margin-top: 4.5%
 
 
 }
@@ -228,6 +232,38 @@ h3 {
     transition: ease-in .2s; 
 }
 
+
+// media queries
+
+@media (max-width: 500px){
+    .links {
+        width: 90%; 
+        font-size: 1rem; 
+    }
+
+    h1 {
+        font-size: 2rem; 
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    h3 {
+        font-size: 1.5rem; 
+    }
+
+    .details {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+    }
+
+    .button {
+        width: 100%
+    }
+}
 
 
 `
@@ -332,20 +368,18 @@ const Header = () => {
                         
                         <div className="occupation">
                             <h1>I am Cristian Fernandez.</h1>
-                            <div className="typing-text"><TypeWriterEffect className="fullstack"
+                            {/* <div className="typing-text"><TypeWriterEffect className="fullstack"
                             textStyle={{ fontFamily: "Libre Baskerville", fontSize: "6rem", fontWeight: "bolder"}}
                             startDelay={800}
                             cursorColor="blue"
                             multiText={[
                                 "Fullstack Developer",
                             ]}
+                            wrapperT
                             typeSpeed={80}
-                            /></div>
+                            /></div> */}
+                            <h2>Web Developer</h2>
                         </div>
-
-                        <div></div>
-                        <div></div>
-                        <div></div>
 
                 
                     </div>
