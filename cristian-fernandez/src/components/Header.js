@@ -370,7 +370,7 @@ const Header = () => {
             setNavContact(false); 
         }
 
-        if (view >= 1500 && view <= 2400){
+        if (view >= 1500 && view <= 2600){
             // we should be in the project section; 
 
             setNavProjects(true); 
@@ -379,7 +379,7 @@ const Header = () => {
             setNavContact(false); 
         }
 
-        if (view >= 2700){
+        if (view >= 2600){
             // we should be in the contact section; 
 
             setNavContact(true); 
