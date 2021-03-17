@@ -18,7 +18,7 @@ const StyledAboutMe = styled.div`
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 & > * {
@@ -98,7 +98,7 @@ hr {
     display:flex;
     justify-content: center; 
     align-items: center; 
-    height: 40vh; 
+    /* height: 40vh;  */
     width: 100%
 }
 
@@ -139,6 +139,66 @@ hr {
     margin: 3%
 }
 
+
+
+
+// media quieries
+
+@media (max-width: 500px) {
+
+
+    h1 {
+        font-size: 5rem; 
+    }
+
+    .title {
+        height: 20rem; 
+    }
+
+    .skills-container {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    p {
+        font-size: 1.8rem; 
+    }
+    
+
+    h2 {
+        font-size: 3.7rem; 
+    }
+
+    .titles {
+        margin-bottom: 10%
+    }
+
+    .skills-container > * {
+        width: 100%; 
+        margin: 2%
+    }
+
+    .all-languages {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+    }
+
+    .technology {
+        margin: 2%
+    }
+
+    hr {
+        width: 40%
+    }
+
+
+
+}
+
 `
 
 const AboutMe = () => {
@@ -150,7 +210,7 @@ const AboutMe = () => {
 
     const languages = ["HTML", "CSS", "Javascript", "Node", "Python", "C++"]
 
-    const technologies = ["React", "Redux", "Express", "Next", "mySQL", "MongoDB", "Mongoose", "Version Control", "Github"]
+    const technologies = ["React", "Redux", "Express", "Next", "mySQL", "MongoDB", "Mongoose", "Github", "Version Control"]
 
     const allLanguages = languages.map((cur, index) => {
         return (
@@ -176,17 +236,17 @@ const AboutMe = () => {
             </div>
             <div className="skills-container">
                 <div className="about-me">
-                    <h2>Hello!</h2>
+                    <h2 className="titles">Hello!</h2>
                     <p>My name is Cristian Fernandez and I am a passionate Web Developer. I love to build efficient and scaleable products using the latest technologies. I would love to be part of a team that wants to have an impact on the current tech savvy world. <br></br> <br></br>Whether it's a project, chat, or job opportuniy, I would love to hear from you. Don't hesitate to reach out.</p>
                 </div>
                 <div className="languages">
-                    <h2>Languages</h2>
+                    <h2 className="titles">Languages</h2>
                     <div className="all-languages">
                         {allLanguages}
                     </div>
                 </div>
                 <div className="languages">
-                    <h2>Technologies</h2>
+                    <h2 className="titles">Technologies</h2>
                     <div className="all-languages">
                         {allTechnologies}
                     </div>
