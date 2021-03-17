@@ -289,7 +289,7 @@ h4 {
     }
 
     h1 {
-        font-size: 3rem; 
+        font-size: 4rem; 
     }
 
     h3 {
@@ -298,6 +298,10 @@ h4 {
 
     h4 {
         font-size: 2.7rem; 
+    }
+
+    .occupation {
+        margin-top: 5%
     }
 
     //buttons middle header
@@ -315,7 +319,7 @@ h4 {
         justify-content: center; 
         align-items: center; 
         flex-direction: column; 
-        width: 50%
+        width: 60%
     }
 
 
@@ -425,7 +429,7 @@ const Header = () => {
                 <div className="title">
                     <h3>WELCOME,</h3>
                     <h1>I am Cristian Fernandez.</h1>
-                    <h4>Web Developer</h4>
+                    <h4 className="occupation">Web Developer</h4>
                 </div>
                 
                     
