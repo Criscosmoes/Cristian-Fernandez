@@ -97,15 +97,13 @@ hr {
 .skills-container {
     display:flex;
     justify-content: center; 
-    align-items: center; 
-    /* height: 40vh;  */
     width: 100%
 }
 
 .skills-container > * {
-    width: 30%; 
-    height: 100%; 
-    margin: 1%
+    width: 30%;
+    margin: 1%; 
+
 }
 
 
@@ -135,8 +133,10 @@ hr {
     flex-wrap: wrap; 
 }
 
+
+
 .languages > * {
-    margin: 3%
+    margin: 3%;
 }
 
 
@@ -178,7 +178,7 @@ hr {
 
     .skills-container > * {
         width: 100%; 
-        margin: 2%
+        margin: 2%;
     }
 
     .all-languages {
