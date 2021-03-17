@@ -65,9 +65,6 @@ const StyledHeader = styled.div`
     transition: all .2s linear; 
 }
 
-.icon {
-    margin-left: 4%; 
-}
 
 // center div
 
@@ -86,7 +83,6 @@ const StyledHeader = styled.div`
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    height: 50vh;
     width: 100%
 }
 
@@ -141,22 +137,19 @@ h4 {
     width: 100%
 }
 
-.occupation > * {
-    margin: 1%
-}
 
 
 .buttons {
     display: flex;
     align-items: flex-start; 
-    justify-content: center; 
+    justify-content: space-evenly; 
     flex-direction: column; 
     width: 15%; 
     font-size: 1.8rem; 
     font-family: 'montserrat', sans-serif;
     font-weight: bolder; 
     letter-spacing: 0.1rem;
-    margin-right: 5%
+    margin-right: 5%;
 
 }
 
@@ -264,14 +257,26 @@ h4 {
     //background 
 
     & {
-        height: 80vh; 
+        height: 100vh; 
+    }
+
+    .nav {
+        height: 7vh; 
     }
 
     //nav bar
 
     .links {
-        font-size: 1.1rem; 
-        width: 100%; 
+        font-size: .98rem; 
+        width: 100%;
+        height: 100%
+    }
+
+    .link {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100%
     }
 
     // middle header 
@@ -287,6 +292,10 @@ h4 {
 
     .title {
         width: 100%
+    }
+
+    .title > * {
+        margin: 4%
     }
 
     .center-div > * {
@@ -312,7 +321,8 @@ h4 {
     //buttons middle header
 
     .button {
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
+        width: 100% 
     }
 
     .react-icons {
