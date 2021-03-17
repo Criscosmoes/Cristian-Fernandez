@@ -41,6 +41,17 @@ const StyledFooter = styled.div`
 }
 
 
+@media (max-width: 500px){
+
+    .icons {
+        font-size: 2.3rem; 
+        width: 30%
+    }
+
+
+
+}
+
 
 `
 

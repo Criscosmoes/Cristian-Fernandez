@@ -340,7 +340,7 @@ const Header = () => {
 
     const changeNavBar = () => {
 
-        if(window.scrollY >= 920){
+        if(window.scrollY >= 400){
             setNavBar(true); 
         }
         else {
@@ -350,7 +350,7 @@ const Header = () => {
 
         const view = window.scrollY; 
 
-        if (view >= 0 && view <= 600){
+        if (view >= 0 && view <= 500){
             // we should be in the home area; 
 
             setNavHome(true); 
@@ -361,7 +361,7 @@ const Header = () => {
 
 
 
-        if (view >= 600 && view <= 1500){
+        if (view >= 500 && view <= 1500){
             // we should be in the about section; 
 
             setNavAbout(true); 
@@ -412,7 +412,7 @@ const Header = () => {
                     <Link className={`link ${navHome ? "orange" : ""}`} to="Home" smooth={true}>
                         Home
                     </Link>
-                    <Link to="About" smooth={true} offset={-60} className={`link ${navAbout ? "orange" : ""}`}>
+                    <Link to="About" smooth={true} offset={-50} className={`link ${navAbout ? "orange" : ""}`}>
                         About
                     </Link>
                     <Link className={`link ${navProjects ? "orange" : ""}`} to="Projects" smooth={true} offset={-50}>
