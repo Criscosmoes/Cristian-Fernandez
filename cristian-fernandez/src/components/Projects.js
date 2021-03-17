@@ -85,8 +85,7 @@ p {
     flex-direction: column; 
     margin: 1%; 
     background: white; 
-    min-height: 77rem; 
-    max-height: 77rem; 
+    max-height: 80rem; 
 }
 
 .project > * {
@@ -111,12 +110,11 @@ img {
     justify-content: center; 
     align-items: center; 
     flex-direction: column; 
-    text-align: center; 
-    width: 80%
+    text-align: center;
 }
 
 .details > * {
-    margin: 5%
+    margin: 3%
 }
 
 button {
@@ -159,6 +157,52 @@ button {
 hr {
     width: 10%;
     border: .1px solid #DAAF66;  
+}
+
+
+@media (max-width: 500px){
+
+    // header 
+
+    & > * {
+        margin: 6%
+    }
+
+    .title > * {
+        margin: 2.5%
+    }
+
+    h1 {
+        font-size: 4.3rem; 
+    }
+
+
+    // projects 
+
+    .projects {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column;
+        width: 100%
+    }
+
+    .project {
+        width: 90%;
+        margin: 5%
+    }
+
+    img {
+        height: 250px;
+        width: 95%
+    }
+
+    hr {
+        width: 40%
+    }
+
+
+
 }
 
 `
