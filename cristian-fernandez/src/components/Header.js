@@ -270,7 +270,7 @@ h4 {
     //nav bar
 
     .links {
-        font-size: 1rem; 
+        font-size: 1.1rem; 
         width: 100%; 
     }
 
@@ -281,7 +281,12 @@ h4 {
         justify-content: center; 
         align-items: center; 
         flex-direction: column; 
-        text-align: center; 
+        text-align: center;
+        width: 100%
+    }
+
+    .title {
+        width: 100%
     }
 
     .center-div > * {
@@ -293,11 +298,11 @@ h4 {
     }
 
     h3 {
-        font-size: 1.8rem; 
+        font-size: 2rem; 
     }
 
     h4 {
-        font-size: 2.7rem; 
+        font-size: 3rem; 
     }
 
     .occupation {
@@ -320,6 +325,10 @@ h4 {
         align-items: center; 
         flex-direction: column; 
         width: 60%
+    }
+
+    .i-am {
+        font-size: 3.5rem; 
     }
 
 
@@ -428,7 +437,7 @@ const Header = () => {
 
                 <div className="title">
                     <h3>WELCOME,</h3>
-                    <h1>I am Cristian Fernandez.</h1>
+                    <h1><span className="i-am">I am</span><br></br> Cristian Fernandez.</h1>
                     <h4 className="occupation">Web Developer</h4>
                 </div>
                 
