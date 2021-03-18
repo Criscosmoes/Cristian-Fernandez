@@ -205,6 +205,53 @@ hr {
 
 }
 
+
+@media (max-width: 800px){
+
+// header 
+
+& > * {
+    margin: 6%
+}
+
+.title > * {
+    margin: 2.5%
+}
+
+h1 {
+    font-size: 4.3rem; 
+}
+
+
+// projects 
+
+.projects {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+    width: 100%
+}
+
+.project {
+    width: 90%;
+    margin: 5%
+}
+
+img {
+    height: 250px;
+    width: 95%
+}
+
+hr {
+    width: 40%
+}
+
+
+
+}
+
+
 `
 
 const Projects = () => {
