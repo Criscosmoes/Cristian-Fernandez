@@ -260,14 +260,6 @@ a {
 
     //background 
 
-    & {
-        height: 100vh; 
-    }
-
-    .nav {
-        height: 7vh; 
-    }
-
     //nav bar
 
     .links {
@@ -350,6 +342,93 @@ a {
 
 }
 
+@media (max-width: 800px){
+
+
+    .links {
+        font-size: 1.7rem; 
+        width: 100%;
+        height: 100%
+    }
+
+    .link {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100%
+    }
+
+     // middle header 
+
+     .center-div {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+        text-align: center;
+        width: 100%
+    }
+
+    .center-div > * {
+        margin: 2%
+    }
+
+    .title {
+        width: 100%
+    }
+
+    .title > * {
+        margin: 1%
+    }
+
+
+    h1 {
+        font-size: 8rem; 
+    }
+
+    h3 {
+        font-size: 5rem; 
+    }
+
+    h4 {
+        font-size: 6rem; 
+    }
+
+    .occupation {
+        margin-top: 5%
+    }
+
+
+    //buttons middle header
+
+    .button {
+        font-size: 2rem;
+        width: 80%
+    }
+
+    .react-icons {
+        font-size: 7rem; 
+    }
+
+    .buttons {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        width: 50%
+    }
+
+    .i-am {
+        font-size: 3.5rem; 
+    }
+
+    .footer {
+        font-size: 1rem; 
+    }
+
+
+}
+
 
 `
 
@@ -365,7 +444,7 @@ const Header = () => {
 
     const changeNavBar = () => {
 
-        if(window.scrollY >= 400){
+        if(window.scrollY >= 900){
             setNavBar(true); 
         }
         else {

@@ -199,6 +199,63 @@ hr {
 
 }
 
+
+@media (max-width: 800px) {
+
+
+h1 {
+    font-size: 6rem; 
+}
+
+.title {
+    height: 22rem; 
+}
+
+.skills-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    text-align: center; 
+}
+
+p {
+    font-size: 2.5rem; 
+}
+
+
+h2 {
+    font-size: 4.2rem; 
+}
+
+.titles {
+    margin-bottom: 10%
+}
+
+.skills-container > * {
+    width: 100%; 
+    margin: 2%;
+}
+
+.all-languages {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.technology {
+    font-size: 1.6rem; 
+    margin: 2%
+}
+
+hr {
+    width: 40%
+}
+
+
+
+}
+
 `
 
 const AboutMe = () => {
