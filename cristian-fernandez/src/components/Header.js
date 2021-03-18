@@ -250,6 +250,10 @@ h4 {
 }
 
 
+a {
+    color: white; 
+}
+
 // media queries
 
 @media (max-width: 500px){
@@ -326,7 +330,7 @@ h4 {
     }
 
     .react-icons {
-        font-size: 3.2rem; 
+        font-size: 4rem; 
     }
 
     .buttons {
@@ -340,6 +344,8 @@ h4 {
     .i-am {
         font-size: 3.5rem; 
     }
+
+    
 
 
 }
@@ -454,8 +460,8 @@ const Header = () => {
                     
                 <div className="buttons">
                     <div className="icons">
-                        <ImGithub className="react-icons" />
-                        <GrLinkedin className="react-icons" />
+                        <a href="https://github.com/Criscosmoes" target="_blank"><ImGithub className="react-icons" /></a>
+                        <a href="https://www.linkedin.com/in/cristian-fernandez-4357091a9/" target="_blank"><GrLinkedin className="react-icons" /></a>
                     </div>
                     <Link className="button" to="Projects" smooth={true} offset={-30}>
                         Projects

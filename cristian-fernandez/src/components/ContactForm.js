@@ -239,6 +239,9 @@ hr {
         margin-top: 10%
     }
 
+    .icon {
+        font-size: 5rem; 
+    }
 
     h1 {
         font-size: 5rem; 
@@ -280,6 +283,8 @@ hr {
 
         font-size: 1.6rem; 
     }
+
+
 
     
 }

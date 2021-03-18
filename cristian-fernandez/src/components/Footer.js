@@ -40,11 +40,15 @@ const StyledFooter = styled.div`
     cursor: pointer;
 }
 
+a {
+    color: white; 
+}
+
 
 @media (max-width: 500px){
 
     .icons {
-        font-size: 2.3rem; 
+        font-size: 3rem; 
         width: 30%
     }
 
@@ -62,8 +66,8 @@ const Footer = () => {
                 Copyright &#169; 2021
             </div>
             <div className="icons">
-                <ImGithub className="icon"/>
-                <GrLinkedin className="icon" />
+                <a href="https://github.com/Criscosmoes" target="_blank"><ImGithub className="icon" /></a>
+                <a href="https://www.linkedin.com/in/cristian-fernandez-4357091a9/" target="_blank"><GrLinkedin className="icon" /></a>
             </div>
         </StyledFooter>
     )
