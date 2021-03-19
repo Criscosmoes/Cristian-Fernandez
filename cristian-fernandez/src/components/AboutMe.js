@@ -144,60 +144,6 @@ hr {
 
 // media quieries
 
-@media (max-width: 500px) {
-
-
-    h1 {
-        font-size: 5rem; 
-    }
-
-    .title {
-        height: 20rem; 
-    }
-
-    .skills-container {
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        flex-direction: column;
-        text-align: center; 
-    }
-
-    p {
-        font-size: 1.8rem; 
-    }
-    
-
-    h2 {
-        font-size: 3.7rem; 
-    }
-
-    .titles {
-        margin-bottom: 10%
-    }
-
-    .skills-container > * {
-        width: 100%; 
-        margin: 2%;
-    }
-
-    .all-languages {
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-    }
-
-    .technology {
-        margin: 2%
-    }
-
-    hr {
-        width: 40%
-    }
-
-
-
-}
 
 
 @media (max-width: 800px) {
@@ -255,6 +201,64 @@ hr {
 
 
 }
+
+
+@media (max-width: 500px) {
+
+
+    h1 {
+        font-size: 5rem; 
+    }
+
+    .title {
+        height: 20rem; 
+    }
+
+    .skills-container {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    p {
+        font-size: 1.8rem; 
+    }
+    
+
+    h2 {
+        font-size: 3.7rem; 
+    }
+
+    .titles {
+        margin-bottom: 10%
+    }
+
+    .skills-container > * {
+        width: 100%; 
+        margin: 2%;
+    }
+
+    .all-languages {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+    }
+
+    .technology {
+        margin: 2%
+    }
+
+    hr {
+        width: 40%
+    }
+
+
+
+}
+
+
 
 `
 
