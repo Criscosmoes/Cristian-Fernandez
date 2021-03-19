@@ -45,7 +45,7 @@ a {
 }
 
 
-@media (min-width: 800px){
+@media (max-width: 800px){
 
 .icons {
     font-size: 3rem; 
@@ -56,8 +56,8 @@ a {
 @media (max-width: 500px){
 
     .icons {
-        font-size: 3rem; 
-        width: 30%
+    font-size: 3rem; 
+    width: 30%
     }
 }
 
