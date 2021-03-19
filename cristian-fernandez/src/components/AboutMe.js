@@ -247,7 +247,8 @@ hr {
     }
 
     .technology {
-        margin: 2%
+        margin: 2%; 
+        font-size: 1.1rem; 
     }
 
     hr {

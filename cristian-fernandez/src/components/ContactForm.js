@@ -293,8 +293,6 @@ form {
 
 @media (max-width: 500px) {
 
-
-
     .lets-talk {
         margin-top: 10%
     }
