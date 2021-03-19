@@ -289,6 +289,65 @@ hr {
     
 }
 
+
+@media (max-width: 800px) {
+
+
+
+.lets-talk {
+    margin-top: 10%
+}
+
+.icon {
+    font-size: 5rem; 
+}
+
+h1 {
+    font-size: 5rem; 
+}
+
+.lets-talk > * {
+    margin: 2%
+}
+
+hr {
+    width: 40%
+}
+
+// contact 
+
+.contact {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; 
+    width: 90%; 
+    text-align: center; 
+}
+
+form {
+    width: 100%;
+}
+
+.information {
+    width: 100%; 
+}
+
+.info {
+    width: 100%
+}
+
+
+.details {
+
+    font-size: 1.6rem; 
+}
+
+
+
+
+}
+
 `
 
 

@@ -56,6 +56,17 @@ a {
 
 }
 
+@media (max-width: 800px){
+
+.icons {
+    font-size: 3rem; 
+    width: 30%
+}
+
+
+
+}
+
 
 `
 
