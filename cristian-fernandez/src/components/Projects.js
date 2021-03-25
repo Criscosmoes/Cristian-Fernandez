@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'; 
 import { motion } from 'framer-motion'; 
 
+
+import MoviesLogo from "../pictures/movies-info.png"; 
+
 const StyledProjects = styled.div`
 
 
@@ -65,7 +68,7 @@ h4 {
 }
 
 p {
-    width: 100%; 
+    width: 80%; 
     font-size: 1.7rem; 
     line-height: 2.2rem;
     font-family: 'Libre Baskerville', sans-serif;
@@ -80,16 +83,16 @@ p {
     box-shadow: 10px 10px 30px black;
     width: 47%; 
     display: flex; 
-    justify-content: center; 
+    justify-content: space-evenly; 
     align-items: center;
     flex-direction: column; 
     margin: 1%; 
     background: white; 
-    max-height: 80rem; 
+    height: 1000px; 
 }
 
 .project > * {
-    margin: 2%
+    margin: 1%
 }
 
 .projects {
@@ -97,12 +100,12 @@ p {
     justify-content: space-evenly; 
     align-items: center; 
     flex-wrap: wrap;
-    width: 60%;
+    width: 80%;
 }
 
 
 img {
-    width: 90%;
+    width: 98%;
 }
 
 .details {
@@ -130,7 +133,11 @@ button {
     font-weight: bolder;
     text-transform: uppercase; 
     letter-spacing: 0.2rem;
+    margin: 1%
+}
 
+.buttons {
+    width: 80%
 }
 
 .using {
@@ -257,7 +264,13 @@ hr {
 
 const Projects = () => {
 
-    const projects = [{image: "https://images.unsplash.com/photo-1557200134-3103da7b6bff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", title: "Movies Info", description: "Movies Info is a web app that helps you gain instant information on any movie you want. Watch trailers, see cast, and even where you can watch a specific movie. All within seconds. ", url: "https://youtube.com", madeUsing: ["React.js", "React Router", "Redux.js", "Styled Components"]}, {image: "https://images.unsplash.com/photo-1557200134-3103da7b6bff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", title: "Prog Typing", description: "Prog Typing is a place where programmers can use to improve their typing speed. Including popular languages like Python, Javascript,etc. Go from a complete beginner to an expert typist.", url: "https://youtube.com", madeUsing: ["React.js", "React Router", "Redux.js", "Node.js", "Express.js", "MongoDB"]}]
+    const projects = [{image: MoviesLogo, title: "Movies Info", description: "Movies Info is a web app that helps you gain instant information on any movie you want. Watch trailers, see cast, and even a detailed description of a movie. All within seconds. ", url: "https://movies-info.vercel.app/", madeUsing: ["React.js", "React Router", "Redux.js", "Styled Components", "Framer Motion"], gitHub: "https://github.com/Criscosmoes/MyOwnReact/tree/master/final"}, {image: MoviesLogo, title: "Prog Typing", description: "Prog Typing is a place where programmers can use to improve their typing speed. Including popular languages like Python, Javascript,etc. Go from a complete beginner to an expert typist.", url: "https://youtube.com", madeUsing: ["React.js", "React Router", "Redux.js", "Node.js", "Express.js", "MongoDB"]}]
+
+
+    const onUrlClick = link => {
+
+        window.open(link); 
+    }
 
     const allProjects = projects.map((cur, index) => {
         return (
@@ -275,7 +288,11 @@ const Projects = () => {
                             )
                         })}
                     </div>
-                    <button>Visit Site</button>
+                   
+                   <div className="buttons">
+                    <button onClick={() => onUrlClick(cur.url)}>Visit Site</button>
+                    <button onClick={() => onUrlClick(cur.gitHub)}>Source Code</button>
+                   </div>
                 </div>
             </div>
         )
