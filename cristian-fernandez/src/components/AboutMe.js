@@ -293,7 +293,7 @@ const AboutMe = () => {
             <div className="title">
                 <h4>ABOUT</h4>
                 <h1>About Me</h1>
-                <h3 className="info">Get to know who I am</h3>
+                <h3 className="info">Get to know who I am.</h3>
                 <hr></hr>
             </div>
             <div className="skills-container">

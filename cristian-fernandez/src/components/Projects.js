@@ -106,6 +106,7 @@ p {
 
 img {
     width: 98%;
+    border: 4px solid gray; 
 }
 
 .details {
@@ -313,8 +314,8 @@ const Projects = () => {
             <StyledProjects id="Projects">
                 <div className="title">
                     <h4>PROJECTS</h4>
-                    <h1>Latest Projects</h1>
-                    <h3 className="info">These are some of the projects that I have created recently</h3>
+                    <h1>Recent Projects</h1>
+                    <h3 className="info">These are some of the projects that I have created.</h3>
                     <hr></hr>
                 </div>
                 <div className="projects">
