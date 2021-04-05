@@ -255,7 +255,9 @@ hr {
     }
 
     button {
-        width: 90%
+        height: 5.8rem; 
+        width: 90%;
+        font-size: 1.6rem; 
     }
 
     .buttons {
