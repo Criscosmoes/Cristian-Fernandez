@@ -333,13 +333,21 @@ form {
     }
 
     .info {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
         width: 100%
+    }
+
+    .info > * {
+        margin: 2%
     }
 
 
     .details {
 
-        font-size: 1.6rem; 
+        font-size: 1.8rem; 
     }
 
 

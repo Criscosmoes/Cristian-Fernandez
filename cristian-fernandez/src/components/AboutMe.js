@@ -214,6 +214,10 @@ hr {
         height: 20rem; 
     }
 
+    .title > * {
+        margin: 2%
+    }
+
     .skills-container {
         display: flex; 
         justify-content: center; 
@@ -221,6 +225,8 @@ hr {
         flex-direction: column;
         text-align: center; 
     }
+
+
 
     p {
         font-size: 1.8rem; 

@@ -158,11 +158,11 @@ h4 {
 }
 .button {
     text-align: center; 
-    width: 80%; 
+    width: 90%; 
     padding: 8%; 
     border: 4px solid white; 
     color: white; 
-    font-size: 15px; 
+    font-size: 16px; 
     transition: ease-out 0.4s; 
     text-transform: uppercase; 
 }
@@ -428,8 +428,6 @@ h4 {
     .i-am {
         font-size: 3.5rem; 
     }
-
-    
 
 
 }

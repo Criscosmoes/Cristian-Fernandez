@@ -246,12 +246,20 @@ hr {
     }
 
     img {
-        height: 250px;
-        width: 95%
+        height: 260px;
+        width: 100%
     }
 
     hr {
         width: 40%
+    }
+
+    button {
+        width: 90%
+    }
+
+    .buttons {
+        width: 100%
     }
 
 
