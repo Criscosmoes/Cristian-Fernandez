@@ -422,7 +422,7 @@ h4 {
         justify-content: center; 
         align-items: center; 
         flex-direction: column; 
-        width: 60%
+        width: 80%
     }
 
     .i-am {

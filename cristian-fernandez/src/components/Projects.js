@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion'; 
 
 
-import MoviesLogo from "../pictures/movies-info.png"; 
+import MoviesLogo from "../pictures/Movies-Info-Mock-Up.png"; 
 
 const StyledProjects = styled.div`
 
@@ -105,8 +105,7 @@ p {
 
 
 img {
-    width: 98%;
-    border: 4px solid gray; 
+    width: 98%
 }
 
 .details {
@@ -265,7 +264,7 @@ hr {
 
 const Projects = () => {
 
-    const projects = [{image: MoviesLogo, title: "Movies Info", description: "Movies Info is a web app that helps you gain instant information on any movie you want. Watch trailers, see cast, and even a detailed description of a movie. All within seconds. ", url: "https://movies-info.vercel.app/", madeUsing: ["React.js", "React Router", "Redux.js", "Styled Components", "Framer Motion"], gitHub: "https://github.com/Criscosmoes/MyOwnReact/tree/master/final"}, {image: MoviesLogo, title: "Prog Typing", description: "Prog Typing is a place where programmers can use to improve their typing speed. Including popular languages like Python, Javascript,etc. Go from a complete beginner to an expert typist.", url: "https://youtube.com", madeUsing: ["React.js", "React Router", "Redux.js", "Node.js", "Express.js", "MongoDB"]}]
+    const projects = [{image: MoviesLogo, title: "Movies Info", description: "Movies Info is a web app that helps you gain instant information on any movie you want. Watch trailers, see cast, and even a detailed description of a movie. All within seconds. ", url: "https://movies-info.vercel.app/", madeUsing: ["React.js", "React Router", "Redux.js", "Styled Components", "Framer Motion"], gitHub: "https://github.com/Criscosmoes/Movies-Info"}, {image: MoviesLogo, title: "Code Typing", description: "Code Typing is a place where programmers can use to improve their typing speed. Including popular languages like Python, Javascript,etc. Go from a complete beginner to an expert typist.", url: "https://code-typing.herokuapp.com/", madeUsing: ["React.js", "React Router", "Redux.js", "Node.js", "Express.js", "MongoDB", "Mongoose", "Passport", "Heroku",], gitHub:"https://github.com/Criscosmoes/Code-Typing"}]
 
 
     const onUrlClick = link => {
@@ -298,14 +297,6 @@ const Projects = () => {
             </div>
         )
     })
-
-
-/*     const onButtonClick = url => {
-
-        // go to the webpage of the project
-
-
-    } */
 
 
 
