@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 
 import MoviesLogo from "../pictures/Movies-Info-Mock-Up.png"; 
+import CodeTyping from "../pictures/Code-Typing-Mock-Up.png"; 
 
 const StyledProjects = styled.div`
 
@@ -274,7 +275,7 @@ hr {
 
 const Projects = () => {
 
-    const projects = [{image: MoviesLogo, title: "Movies Info", description: "Movies Info is a web app that helps you gain instant information on any movie you want. Watch trailers, see cast, and even a detailed description of a movie. All within seconds. ", url: "https://movies-info.vercel.app/", madeUsing: ["React.js", "React Router", "Redux.js", "Styled Components", "Framer Motion"], gitHub: "https://github.com/Criscosmoes/Movies-Info"}, {image: MoviesLogo, title: "Code Typing", description: "Code Typing is a place where programmers can use to improve their typing speed. Including popular languages like Python, Javascript,etc. Go from a complete beginner to an expert typist.", url: "https://code-typing.herokuapp.com/", madeUsing: ["React.js", "React Router", "Redux.js", "Node.js", "Express.js", "MongoDB", "Mongoose", "Passport", "Heroku",], gitHub:"https://github.com/Criscosmoes/Code-Typing"}]
+    const projects = [{image: MoviesLogo, title: "Movies Info", description: "Movies Info is a web app that helps you gain instant information on any movie you want. Watch trailers, see cast, and even a detailed description of a movie. All within seconds. ", url: "https://movies-info.vercel.app/", madeUsing: ["React.js", "React Router", "Redux.js", "Styled Components", "Framer Motion"], gitHub: "https://github.com/Criscosmoes/Movies-Info"}, {image: CodeTyping, title: "Code Typing", description: "Code Typing is a place where programmers can use to improve their typing speed. Including popular languages like Python, Javascript,etc. Go from a complete beginner to an expert typist.", url: "https://code-typing.herokuapp.com/", madeUsing: ["React.js", "React Router", "Redux.js", "Node.js", "Express.js", "MongoDB", "Mongoose", "Passport", "Heroku",], gitHub:"https://github.com/Criscosmoes/Code-Typing"}]
 
 
     const onUrlClick = link => {
