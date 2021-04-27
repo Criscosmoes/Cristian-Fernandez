@@ -507,7 +507,7 @@ const Header = () => {
           <div className="title">
             <h3>WELCOME, I AM</h3>
             <h1>Cristian Fernandez.</h1>
-            <h4 className="occupation">Software Engineer</h4>
+            <h4 className="occupation">Software Developer</h4>
           </div>
 
           <div className="buttons">
