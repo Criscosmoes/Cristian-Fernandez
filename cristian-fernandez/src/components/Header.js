@@ -272,15 +272,15 @@ const StyledHeader = styled.div`
     }
 
     h1 {
-      font-size: 8rem;
+      font-size: 6rem;
     }
 
     h3 {
-      font-size: 5rem;
+      font-size: 4rem;
     }
 
     h4 {
-      font-size: 6rem;
+      font-size: 5rem;
     }
 
     .occupation {
@@ -291,7 +291,7 @@ const StyledHeader = styled.div`
 
     .button {
       font-size: 2rem;
-      width: 80%;
+      width: 100%;
     }
 
     .react-icons {

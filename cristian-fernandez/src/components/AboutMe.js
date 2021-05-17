@@ -16,6 +16,7 @@ const StyledAboutMe = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 900px;
   }
 
   & > * {
@@ -126,6 +127,10 @@ const StyledAboutMe = styled.div`
   // media quieries
 
   @media (max-width: 800px) {
+    & {
+      height: 0%;
+    }
+
     h1 {
       font-size: 6rem;
     }
@@ -176,6 +181,10 @@ const StyledAboutMe = styled.div`
   }
 
   @media (max-width: 500px) {
+    & {
+      height: 0%;
+    }
+
     h1 {
       font-size: 5rem;
     }
