@@ -516,7 +516,7 @@ const Header = () => {
                 <ImGithub className="react-icons" />
               </a>
               <a
-                href="https://www.linkedin.com/in/cristian-fernandez-4357091a9/"
+                href="https://www.linkedin.com/in/cristian-fernandez-dev/"
                 target="_blank"
               >
                 <GrLinkedin className="react-icons" />
