@@ -158,11 +158,18 @@ const StyledHeader = styled.div`
     transition: all 0.4s ease-in-out;
   }
 
-  .footer {
+  .about {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
     margin-bottom: 1.2%;
+    width: 95%;
+    margin-left: 2%;
   }
 
   .arrow {
@@ -194,10 +201,6 @@ const StyledHeader = styled.div`
   .not-active {
     transition: ease-out 0.5s;
   }
-
-  /*   .test {
-    background: black;
-  } */
 
   .orange {
     color: #daaf66;
@@ -531,8 +534,8 @@ const Header = () => {
           </div>
         </div>
 
-        <div data-aos="flip-up" data-aos-duration="3000" className="footer">
-          <Link to="About" smooth={true}>
+        <div data-aos="flip-up" data-aos-duration="2000" className="footer">
+          <Link className="about" to="About" smooth={true}>
             <MdKeyboardArrowDown className="arrow" />
           </Link>
         </div>
