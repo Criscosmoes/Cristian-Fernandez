@@ -461,7 +461,12 @@ const Header = () => {
   }, []);
 
   return (
-    <motion.div className="test" exit={{ opacity: 1 }} animate={{ opacity: 1 }}>
+    <motion.div
+      className="test"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <StyledHeader id="Home">
         <nav className={`nav ${navBar ? "active" : "not-active"}`}>
           <div></div>
