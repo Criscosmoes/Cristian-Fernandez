@@ -15,48 +15,19 @@ import Footer from "./Footer";
 import { AnimatePresence } from "framer-motion";
 
 const App = () => {
-  const [loading, setLoading] = useState(false);
-
-  const override = `
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    font-size: 10rem;
-    background: #101010
-    
-  `;
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
-
   return (
     <div>
-      {loading ? (
-        <BarLoader
-          css={override}
-          size={40}
-          loading={loading}
-          color={"#daaf66"}
-        />
-      ) : (
-        <AnimatePresence>
-          <Switch>
-            <Route path="/">
-              <Header />
-              <AboutMe />
-              <Projects />
-              <ContactForm />
-              <Footer />
-            </Route>
-          </Switch>
-        </AnimatePresence>
-      )}
+      <AnimatePresence>
+        <Switch>
+          <Route path="/">
+            <Header />
+            <AboutMe />
+            <Projects />
+            <ContactForm />
+            <Footer />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 };

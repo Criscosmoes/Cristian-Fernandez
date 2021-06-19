@@ -290,7 +290,7 @@ const AboutMe = () => {
             <h2 className="titles">Hello!</h2>
             <p>
               My name is Cristian Fernandez and I am a passionate Software
-              Developer. I love to build efficient and scaleable products using
+              Developer. I love to build efficient and scalable products using
               the latest technologies. I would love to be part of a team that
               wants to have an impact on the current tech savvy world. <br></br>{" "}
               <br></br>Whether it's a project, chat, or job opportuniy, I would
